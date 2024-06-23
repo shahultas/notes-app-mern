@@ -16,7 +16,7 @@ const Register = () => {
     if (!email || !password) {
       setError("All fields are required");
     } else {
-      const res = await axios.post("http://localhost:8000/register", {
+      const res = await axios.post("https://notes-app-mern-psi.vercel.app/register", {
         email,
         password,
       });
