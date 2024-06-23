@@ -11,7 +11,7 @@ const Card = () => {
   useEffect(() => {
     const username = localStorage.getItem("username");
     axios
-      .get("http://localhost:8000/")
+      .get("https://notes-app-mern-psi.vercel.app/")
       .then((result) => {
         const data = result.data.filter(
           (item: any) => item.username === username
@@ -22,7 +22,7 @@ const Card = () => {
   }, []);
 
   const HandleDelete = async (_id: any) => {
-    const response = await axios.delete("http://localhost:8000/delete/" + _id);
+    const response = await axios.delete("https://notes-app-mern-psi.vercel.app/delete/" + _id);
     if (response.data === "deleted successfully") {
       router.push("/deleting");
     }
