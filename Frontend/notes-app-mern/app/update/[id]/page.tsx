@@ -11,7 +11,7 @@ const Update = () => {
 
   const HandleSubmit = async (e: any) => {
     e.preventDefault();
-    const response = await axios.put("http://localhost:8000/update/" + id, {
+    const response = await axios.put("https://notes-app-mern-psi.vercel.app/update/" + id, {
       title,
       paragraph,
     });
@@ -22,7 +22,7 @@ const Update = () => {
 
   //   update data
   useEffect(() => {
-    axios.get("http://localhost:8000/updateUser/" + id).then((res) => {
+    axios.get("https://notes-app-mern-psi.vercel.app/updateUser/" + id).then((res) => {
       // setTitle(res.data);
       setTitle(res.data.title);
       setParagraph(res.data.paragraph);
