@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/crud")
+  .connect("mongodb+srv://crud:RHX0iNlRQ2gR3f3b@crud.dbkdt3g.mongodb.net/crud?retryWrites=true&w=majority")
   .then(() => {
     console.log("mongodb connectrd successfully");
   })
