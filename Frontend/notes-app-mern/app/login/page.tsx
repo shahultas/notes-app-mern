@@ -13,7 +13,7 @@ const Login = () => {
 
   const HandleSubmit = async (e: any) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:8000/login", {
+    const res = await axios.post("https://notes-app-mern-psi.vercel.app/login", {
       email,
       password,
     });
