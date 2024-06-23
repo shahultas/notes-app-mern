@@ -13,7 +13,7 @@ const create = () => {
     console.log(title);
     console.log(paragraph);
     const username = localStorage.getItem("username");
-    axios.post("http://localhost:8000/create/", {
+    axios.post("https://notes-app-mern-psi.vercel.app/create/", {
       title: title,
       paragraph: paragraph,
       username: username,
